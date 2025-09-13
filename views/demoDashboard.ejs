@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9fafc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .welcome-card {
+      background: linear-gradient(90deg, #2563eb, #f97316);
+      color: white;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .welcome-card h2 {
+      font-weight: 600;
+    }
+
+    .continue-card {
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      background: #fff;
+    }
+
+    .subject-card {
+      border: none;
+      border-radius: 15px;
+      padding: 20px;
+      background: #fff;
+      transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .subject-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress {
+      height: 6px;
+      border-radius: 4px;
+    }
+
+    .achievement-card {
+      border-radius: 15px;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .streak-card {
+      border-radius: 15px;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      color: white;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .progress-text {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="https://img.icons8.com/ios-filled/50/000000/book.png" alt="Logo" width="30" class="me-2">
+        शिक्षा Siksha
+      </a>
+      <div class="d-flex align-items-center">
+        <select class="form-select me-3" style="width:120px;">
+          <option selected>English</option>
+          <option>Punjabi</option>
+          <option>Hindi</option>
+        </select>
+        <a href="/login" class="btn btn-outline-primary me-2">Login</a>
+        <a href="/register" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5 pt-4">
+
+    <!-- Welcome Header -->
+    <div class="welcome-card mb-4 d-flex justify-content-between align-items-center">
+      <div>
+        <h2>Welcome back, Abhirup!</h2>
+        <p>Ready to continue your learning journey?</p>
+      </div>
+      <h4 class="fw-bold">85% <br><span style="font-size:14px;">Overall Progress</span></h4>
+    </div>
+
+    <div class="row">
+      <!-- Left: Continue + Subjects -->
+      <div class="col-lg-8">
+
+        <!-- Continue Learning -->
+        <div class="continue-card mb-4">
+          <h6 class="text-muted">Continue Learning</h6>
+          <h5 class="fw-bold">Introduction to Computers</h5>
+          <p class="text-muted">Digital Literacy</p>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-primary" style="width: 65%;"></div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">⏱ 15 min</small>
+            <button class="btn btn-primary btn-sm">Continue</button>
+          </div>
+        </div>
+
+        <!-- Subjects -->
+        <h5 class="fw-bold mb-3">Your Subjects</h5>
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <div class="subject-card">
+              <h6>💻 Digital Literacy</h6>
+              <small class="text-muted">डिजिटल साक्षरता</small>
+              <div class="progress my-2">
+                <div class="progress-bar bg-primary" style="width: 75%;"></div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <small class="progress-text">Progress</small>
+                <small class="progress-text">9/12</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="subject-card">
+              <h6>🔢 Mathematics</h6>
+              <small class="text-muted">गणित</small>
+              <div class="progress my-2">
+                <div class="progress-bar bg-primary" style="width: 60%;"></div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <small class="progress-text">Progress</small>
+                <small class="progress-text">9/15</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="subject-card">
+              <h6>🔬 Science</h6>
+              <small class="text-muted">विज्ञान</small>
+              <div class="progress my-2">
+                <div class="progress-bar bg-primary" style="width: 45%;"></div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <small class="progress-text">Progress</small>
+                <small class="progress-text">9/20</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="subject-card">
+              <h6>📖 English</h6>
+              <small class="text-muted">अंग्रेज़ी</small>
+              <div class="progress my-2">
+                <div class="progress-bar bg-primary" style="width: 80%;"></div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <small class="progress-text">Progress</small>
+                <small class="progress-text">8/10</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Achievements + Streak -->
+      <div class="col-lg-4">
+        <div class="achievement-card">
+          <h6 class="fw-bold mb-3">Recent Achievements</h6>
+          <p>🏆 Digital Pioneer <br><small class="text-muted">Completed first digital literacy module</small></p>
+          <p>🔢 Math Wizard <br><small class="text-muted">Solved 50 math problems</small></p>
+          <p>🔥 Consistent Learner <br><small class="text-muted">7-day learning streak</small></p>
+        </div>
+
+        <div class="streak-card text-center">
+          <h6>Learning Streak</h6>
+          <h2 class="fw-bold">7 Days</h2>
+          <p>Keep it up! You're doing great.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

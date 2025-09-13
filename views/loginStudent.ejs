@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Student Login</h2>
+
+    <form action="/students/login" method="post">
+      <label for="rollNo">Roll No:</label><br>
+      <input type="text" id="rollNo" name="rollNo" placeholder="Enter roll number" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>New student? <a href="/students/register">Register here</a></p>
+  </div>
+</body>
+</html>
