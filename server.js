@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const Student = require("./models/student");
-const Teacher = require("./models/teacher"); // <-- create this model
+const Teacher = require("./models/teacher");
 const bcrypt = require("bcryptjs");
 
 mongoose.connect("mongodb://127.0.0.1:27017/digitalLearning")
